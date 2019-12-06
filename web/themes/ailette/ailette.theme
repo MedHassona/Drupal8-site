@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Stable theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\Component\Utility\Html;
+
+
+
+/**
+ * Add an alternative to file name suggestions the paragraphs blocks.
+ *
+ * Implements hook__suggestions_HOOK_alter().
+ * @return array Suggestions.
+*/
+function ailette_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+    if($variables['elements']['#id'] == 'field_paragraphe_des_destination'){
+        $suggestions[] = 'paragraph--des-destinatios';
+    }
+}

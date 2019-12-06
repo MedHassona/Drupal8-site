@@ -1,0 +1,27 @@
+
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+<a href="" class="link"></a>
+<div class="show-bloc">
+  {{ content.field_bg_image_1 }}
+  <!--img src="{{ file_url(content.field_bg_image_1.0['#item'].entity.uri.value) }}" width="647" height="685" alt=""-->
+</div>
+<div class="inside-bloc">
+  <div class="inside">
+    <div class="circle">
+      <figure>
+        <img src="{{ file_url(content.field_image_2.0['#item'].entity.uri.value) }}" height="120" width="128" alt="abbaye">
+      </figure>
+    </div>
+    <h3 class="bolc-title">{{ content.field_titre.0}}</h3>
+    <div class="bloc-btn">
+      <a href="" class="decouvre">{{'Je découvre'}}</a>
+    </div>
+  </div>
+</div>

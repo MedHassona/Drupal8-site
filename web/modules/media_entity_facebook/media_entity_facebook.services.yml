@@ -1,0 +1,6 @@
+services:
+  media_entity_facebook.facebook_fetcher:
+    class: '\Drupal\media_entity_facebook\FacebookFetcher'
+    arguments:
+      - '@logger.factory'
+      - '@http_client'

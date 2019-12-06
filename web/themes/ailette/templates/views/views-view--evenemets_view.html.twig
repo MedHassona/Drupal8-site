@@ -1,0 +1,137 @@
+{#
+/**
+ * @file
+ * Theme override for a main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A css-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   Javascript.
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+{%
+  set classes = [
+    'view',
+    'view-' ~ id|clean_class,
+    'view-id-' ~ id,
+    'view-display-id-' ~ display_id,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+{{ title_prefix }}
+{% if title %}
+  {{ title }}
+{% endif %}
+{{ title_suffix }}
+{% if header %}
+    <section class="slide" style="height: 678px;">
+        <div id="slide">
+            <figure>
+                <picture>
+                    {{ header }}
+                </picture>
+            </figure>
+            <div class="flex-caption" style="top: -340px">
+                <div class="container">
+                    <div class="caption-in">
+                        <h2 class="accroche">
+                            Agenda
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bloc-description">
+        <div class="container-xs">
+            <h2 class="h2_title h2_title_m">{{ 'Événements à ne pas manquer'|t }}</h2>
+            <div class="text-description">
+                <div class="ezxmltext-field">
+                    <p>{{ 'Retrouvez tous les événements proposés tout au long de l’année par la station verte de l’Ailette'| t }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}
+<section class="bloc-agenda">
+  <div class="container">
+    {% if rows %}
+        <section class="liste-events">
+          {{ rows }}
+        </section>
+    {% else %}
+        <section class="liste-events">
+            <div class="bloc-events">
+                <div class="ezxmltext-field">
+                    <p>{{ 'Aucun événement ne correspond à votre recherche.'|t }}</p>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+    {% if empty %}
+      <section class="liste-events">
+        <div class="bloc-events">
+          <div class="ezxmltext-field">
+            <p>{{ 'Aucun événement ne correspond à votre recherche.'|t }}</p>
+            {{ empty }}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+    {% if exposed %}
+    <aside class="search-events" style="float: right;">
+      <div class="form-search">
+        <h3 class="h2_title">{{'Agenda'|t}}</h3>
+        {{ exposed }}
+      </div>
+    </aside>
+    {% endif %}
+    </div>
+</section>
+{% if attachment_before %}
+  <div class="attachment attachment-before">
+    {{ attachment_before }}
+  </div>
+{% endif %}
+{% if pager %}
+  {{ pager }}
+{% endif %}
+{% if attachment_after %}
+  <div class="attachment attachment-after">
+    {{ attachment_after }}
+  </div>
+{% endif %}
+{% if more %}
+  {{ more }}
+{% endif %}
+{% if footer %}
+  <div class="view-footer">
+    {{ footer }}
+  </div>
+{% endif %}
+{% if feed_icons %}
+  <div class="feed-icons">
+    {{ feed_icons }}
+  </div>
+{% endif %}

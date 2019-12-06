@@ -1,0 +1,339 @@
+datepicker:
+  remote: https://github.com/uxsolutions/bootstrap-datepicker
+  license:
+    name: Apache 2.0
+    gpl-compatible: false
+  js:
+    /libraries/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js: {}
+  css:
+    component:
+      /libraries/bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
+datepicker_ar-tn:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ar-tn.min.js: {}
+
+datepicker_ar:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ar.min.js: {}
+
+datepicker_az:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.az.min.js: {}
+
+datepicker_bg:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.bg.min.js: {}
+
+datepicker_bn:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.bn.min.js: {}
+
+datepicker_br:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.br.min.js: {}
+
+datepicker_bs:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.bs.min.js: {}
+
+datepicker_ca:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ca.min.js: {}
+
+datepicker_cs:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.cs.min.js: {}
+
+datepicker_cy:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.cy.min.js: {}
+
+datepicker_da:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.da.min.js: {}
+
+datepicker_de:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.de.min.js: {}
+
+datepicker_el:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.el.min.js: {}
+
+datepicker_en-AU:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-AU.min.js: {}
+
+datepicker_en-CA:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-CA.min.js: {}
+
+datepicker_en-GB:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-GB.min.js: {}
+
+datepicker_en-IE:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-IE.min.js: {}
+
+datepicker_en-NZ:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-NZ.min.js: {}
+
+datepicker_en-ZA:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-ZA.min.js: {}
+
+datepicker_eo:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.eo.min.js: {}
+
+datepicker_es:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js: {}
+
+datepicker_et:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.et.min.js: {}
+
+datepicker_eu:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.eu.min.js: {}
+
+datepicker_fa:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fa.min.js: {}
+
+datepicker_fi:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fi.min.js: {}
+
+datepicker_fo:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fo.min.js: {}
+
+datepicker_fr-CH:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fr-CH.min.js: {}
+
+datepicker_fr:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.fr.min.js: {}
+
+datepicker_gl:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.gl.min.js: {}
+
+datepicker_he:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.he.min.js: {}
+
+datepicker_hi:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.hi.min.js: {}
+
+datepicker_hr:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.hr.min.js: {}
+
+datepicker_hu:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.hu.min.js: {}
+
+datepicker_hy:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.hy.min.js: {}
+
+datepicker_id:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.id.min.js: {}
+
+datepicker_is:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.is.min.js: {}
+
+datepicker_it-CH:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.it-CH.min.js: {}
+
+datepicker_it:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.it.min.js: {}
+
+datepicker_ja:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ja.min.js: {}
+
+datepicker_ka:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ka.min.js: {}
+
+datepicker_kh:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.kh.min.js: {}
+
+datepicker_kk:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.kk.min.js: {}
+
+datepicker_km:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.km.min.js: {}
+
+datepicker_ko:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ko.min.js: {}
+
+datepicker_kr:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.kr.min.js: {}
+
+datepicker_lt:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.lt.min.js: {}
+
+datepicker_lv:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.lv.min.js: {}
+
+datepicker_me:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.me.min.js: {}
+
+datepicker_mk:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.mk.min.js: {}
+
+datepicker_mn:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.mn.min.js: {}
+
+datepicker_ms:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ms.min.js: {}
+
+datepicker_nl-BE:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.nl-BE.min.js: {}
+
+datepicker_nl:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.nl.min.js: {}
+
+datepicker_no:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.no.min.js: {}
+
+datepicker_oc:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.oc.min.js: {}
+
+datepicker_pl:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.pl.min.js: {}
+
+datepicker_pt-BR:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.pt-BR.min.js: {}
+
+datepicker_pt:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.pt.min.js: {}
+
+datepicker_ro:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ro.min.js: {}
+
+datepicker_ro-latin:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ro-latin.min.js: {}
+
+datepicker_rs:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.rs.min.js: {}
+
+datepicker_ru:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js: {}
+
+datepicker_si:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.si.min.js: {}
+
+datepicker_sk:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sk.min.js: {}
+
+datepicker_sl:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sl.min.js: {}
+
+datepicker_sq:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sq.min.js: {}
+
+datepicker_sr-latin:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sr-latin.min.js: {}
+
+datepicker_sr:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sr.min.js: {}
+
+datepicker_sv:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sv.min.js: {}
+
+datepicker_sw:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.sw.min.js: {}
+
+datepicker_ta:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ta.min.js: {}
+
+datepicker_tg:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.tg.min.js: {}
+
+datepicker_th:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.th.min.js: {}
+
+datepicker_tk:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.tk.min.js: {}
+
+datepicker_tr:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.tr.min.js: {}
+
+datepicker_uk:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.uk.min.js: {}
+
+datepicker_uz-cyrl:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.uz-cyrl.min.js: {}
+
+datepicker_uz-latn:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.uz-latn.min.js: {}
+
+datepicker_vi:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.vi.min.js: {}
+
+datepicker_zh-CN:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js: {}
+
+datepicker_zh:
+  js:
+    /libraries/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-TW.min.js: {}

@@ -1,0 +1,21 @@
+
+{#
+/**
+ * @file
+ * Theme override for tabs.
+ */
+#}
+<div{{ attributes.addClass(classes) }} style="position: absolute;top: 150px;z-index: 1000;font-weight: 600;">
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {% if content %}
+      <nav class="tabs" role="navigation" aria-label="{{ 'Tabs'|t }}">
+        {{ content }}
+      </nav>
+    {% endif %}
+  {% endblock %}
+</div>

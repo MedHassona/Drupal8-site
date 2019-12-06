@@ -1,0 +1,104 @@
+
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('navbar-nav') }}>
+    {% else %}
+      <ul class="sub-sub-menu">
+    {% endif %}
+    {% set classVar = 1 %}
+    {% set className = 'menu-' %}
+
+    {% for item in items %}
+      {% set itemClass = className ~ classVar %}
+
+        {% if menu_level == 0 %}
+          <li class="{{ itemClass }}">
+          {% if classVar == 1 %}
+            <a href="{{ item.url }}" class="title-menu">
+          <span>
+            <strong>AXO'PLAGE</strong>
+            Sable et détente
+          </span>
+            </a>
+          {% elseif classVar == 2 %}
+            <span class="border"></span>
+            <a href="{{ item.url }}" class="title-menu">
+            <span>
+              <strong>{{ item.title }}</strong>
+              Sports nautiques
+            </span>
+            </a>
+          {% elseif classVar == 3 %}
+            <span class="border"></span>
+            <a href="{{ item.url }}" class="title-menu">
+            <span>
+              <strong>{{ item.title }}</strong>
+              Parcours international
+            </span>
+            </a>
+          {% elseif classVar == 4 %}
+            <span class="border"></span>
+            <a href="{{ item.url }}" class="title-menu">
+            <span>
+              <strong>{{ item.title }}</strong>
+              Véloroute 20km
+            </span>
+            </a>
+          {% elseif classVar == 5 %}
+            <span class="border"></span>
+            <a href="{{ item.url }}" class="title-menu">
+            <span>
+              <strong>{{ item.title }}</strong>
+              Nature et détente
+            </span>
+            </a>
+          {% elseif classVar == 6 %}
+            <span class="border"></span>
+            <a href="{{ item.url }}" class="title-menu">
+            <span class="last">
+              <strong>1 JOURNEE</strong>
+              <strong>IDEAL</strong>
+            </span>
+            </a>
+          {% elseif classVar == 7 %}
+            <span class="border"></span>
+            <a href="{{ item.url }}" class="title-menu">
+            <span class="last">
+              <strong>{{ item.title }}</strong>
+            </span>
+            </a>
+          {% endif %}
+          {% if item.below %}
+            <div class="sub-menu">
+              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            </div>
+          {% endif %}
+        {% else %}
+          <li class="title-menu">
+        {% endif %}
+
+
+
+
+          {% if menu_level != 0 %}
+            <a href="{{ item.url }}">{{ item.title }}</a>
+              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+
+      </li>
+
+      {% set classVar = classVar + 1 %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

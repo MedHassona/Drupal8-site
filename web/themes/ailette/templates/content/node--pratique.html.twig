@@ -1,0 +1,22 @@
+<div{{ content_attributes.addClass('page-content') }}>
+  <section class="slide" style="height: 678px;">
+    <div id="slide">
+      <figure>
+        <picture>{{ content.field_pratique_slide }}</picture>
+        <!--img src="{{ file_url(node.field_top_image.entity.fileuri) }}" alt=""-->
+      </figure>
+      <div class="flex-caption" style="top: -340px">
+        <div class="container">
+          <div class="caption-in">
+            <h2 class="accroche">{{ label }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bloc-aussi">
+    <div class="container">
+      {{ content.field_pratiques_items }}
+    </div>
+  </section>
+</div>

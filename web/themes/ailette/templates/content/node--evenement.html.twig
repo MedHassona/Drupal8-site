@@ -1,0 +1,128 @@
+<div class="page-content">
+  <section class="slide" style="height: 678px;">
+    <div id="slide">
+      <figure>
+        <picture>{{ content.field_slide_img }}</picture>
+        <!--img src="{{ file_url(node.field_top_image.entity.fileuri) }}" alt=""-->
+      </figure>
+      <div class="flex-caption" style="top: -340px">
+        <div class="container">
+          <div class="caption-in">
+            <h2 class="accroche">{{ label }}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bloc-description">
+    <div class="container-xs">
+      <div class="text-description">
+        <div class="ezxmltext-field">
+          {{ content.field_description_eve }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="detail-wraped">
+    <div class="container">
+      <div class="row">
+        <section class="col-left-detail">
+          <article>
+            <div class="text-field">
+              <h3>{{ label}}</h3>
+              <div class="ezxmltext-field">
+                <p>{{ content.field_description_img }}</p>
+                <div>
+                  <p>
+                    {{ content.field_img_eve }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <div class="detail_article">
+            <h3>{{'Practical Informations'|t}}</h3>
+            <ul>
+              {% if content.field_date_start|render or content.field_date_end|render %}
+              <li><strong>Date</strong>
+                {% if content.field_date_start|render and content.field_date_end|render %}
+                <p>
+                  Du {{ content.field_date_start }} au {{ content.field_date_end }}
+                </p>
+                {% else %}
+                <p>
+                  {{ content.field_date_start }}
+                </p>
+                {% endif %}
+              </li>
+              {% endif %}
+              {% if content.field_thematiques|render %}
+              <li>
+                <strong>{{'Thematic(s)'|t}}</strong>
+                <p> {{ content.field_thematiques }}</p>
+              </li>
+              {% endif %}
+              {% if content.field_organisateur|render %}
+              <li>
+                <strong>{{'Organizer'|t}}</strong>
+                <p>{{ content.field_organisateur }}</p>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+          {% if content.field_reservation|render or content.field_tarifs|render or content.field_conditions_acces|render %}
+            <div class="detail_article">
+              {% if content.field_reservation|render %}
+                <h3>{{'Reservation'|t}}</h3>
+                <ul>
+                  <li>
+                    <div class="ezxmltext-field">
+                      {{ content.field_reservation }}
+                    </div>
+                  </li>
+                </ul>
+              {% endif %}
+              {% if content.field_tarifs|render or content.field_conditions_acces|render %}
+                <h3>{{'Prices and conditions of access'|t}}</h3>
+                <ul>
+                  <li>
+                    <div class="ezxmltext-field">
+                      <p>{{ content.field_tarifs }}</p>
+                      <p>{{ content.field_conditions_acces }}</p>
+                    </div>
+                  </li>
+                </ul>
+              {% endif %}
+            </div>
+          {% endif %}
+        </section>
+        {% if content.field_lieu|render or content.field_gps|render  or content.field_site_web|render %}
+          <div class="map-contact">
+            <div class="bloc-contact ">
+              <div >
+                  <div class="detail_article">
+                    <h3>{{'Contact'|t}}</h3>
+                    {% if content.field_lieu|render %}
+                    <strong>{{'Place'|t}}</strong>
+                    <p>
+                      {{ content.field_lieu }}<br>
+                    </p>
+                    {% endif %}
+                    {% if content.field_gps|render %}
+                    <strong>GPS</strong>
+                    <p>{{ content.field_gps }}</p>
+                    {% endif %}
+                    {% if content.field_site_web|render %}
+                      <strong>{{'Web site'|t}}</strong>
+                      <p>{{ content.field_site_web }}</p>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

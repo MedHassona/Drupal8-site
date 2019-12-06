@@ -1,0 +1,3 @@
+media.source.facebook:
+  type: media.source.field_aware
+  label: '"Facebook" media source configuration'

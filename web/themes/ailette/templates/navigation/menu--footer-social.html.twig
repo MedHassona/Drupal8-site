@@ -1,0 +1,39 @@
+
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul>
+    {% else %}
+      <ul>
+    {% endif %}
+    {% set className = 'fa-' %}
+
+    {% for item in items %}
+      {% set itemClass = className ~ item.title %}
+
+        {% if menu_level == 0 %}
+          <li>
+            <a href="{{ item.url }}" class="icon-link round {{ item.title }}">
+              <i class="fa {{ itemClass }}"></i>
+            </a>
+        {% else %}
+          <li class="title-menu">
+        {% endif %}
+        {% if menu_level != 0 %}
+          <a href="{{ item.url }}">{{ item.title }}</a>
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

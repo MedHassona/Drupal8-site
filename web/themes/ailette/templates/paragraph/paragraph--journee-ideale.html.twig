@@ -1,0 +1,25 @@
+
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+<a href="">
+{% if content.field_image_1.0['#item'].width < 350 %}
+  <div class="journee_bloc_1">
+{% else %}
+  <div class="journee_bloc_2">
+{% endif %}
+    <img src="{{ file_url(content.field_image_1.0['#item'].entity.uri.value) }}" alt="">
+    <div class="journee_title sable" style="">
+      <h3>{{ content.field_titre_1.0 }}</h3>
+    </div>
+  </div>
+</a>
+
+      
+

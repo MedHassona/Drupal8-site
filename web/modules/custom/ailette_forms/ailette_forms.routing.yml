@@ -1,0 +1,14 @@
+ailette_forms.subscribe_form:
+  path: '/ailette_forms/subscribe'
+  defaults:
+    _form: 'Drupal\ailette_forms\Form\SubscribeForm'
+    _title: 'Subscribe in ailette'
+  requirements:
+    _permission: 'access content'
+ailette_forms.subscribe:
+  path: '/subscribe'
+  defaults:
+    _controller: 'Drupal\ailette_forms\Controller\FormsController::subscribe'
+    _title: 'Subscribe to ailette'
+  requirements:
+    _permission: 'access content'

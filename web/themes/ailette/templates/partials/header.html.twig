@@ -1,0 +1,41 @@
+<div class="header-top">
+    <div class="container">
+        <div class="header-logo">
+            <h1>
+                <span class="logo">
+                    <a href="{{ path('entity.node.canonical', {'node': 1}) }}">
+                        <img src="{{ base_path ~ directory }}/images/logo.svg" alt="logo">
+                    </a>
+                </span>
+                <span class="acc-logo">
+                    {{ 'Espaces de loisirs dans l\'Aisne' | t }}
+                </span>
+            </h1>
+        </div>
+        <div class="header-right">
+            <ul>
+                <li class="weather">
+                    <a href="">
+                        <div id="TT_FvewrBdBYMrcte1KMkqE1111k6aKGtStBkzeY">Météo</div>
+                    </a>
+                </li>
+                <li class="search">
+                    <span class="search-logo"></span>
+                    <div></div>
+                </li>
+                <li class="lang">
+                    <a href="">
+                        <span class="current-lang">FR</span>
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="langs">
+                        <li>EN</li>
+                        <li>DE</li>
+                        <li>ES</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{{ page.mainNavigation }}

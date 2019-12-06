@@ -1,0 +1,55 @@
+
+<section class="slide" style="height: 1048px;">
+  <div id="slide">
+    {{drupal_view('slideshow', 'block_1')}}
+  </div>
+  <div class="down">
+    <a href="#journee_ideale" class="arrow-link">
+      <span class="arrow"></span>
+    </a>
+  </div>
+</section>
+<section id="nature" class="nature">
+  <div class="bloc-container animate show">
+    <h2 class="title-nature">{{ node.field_destination_nature_titre.value | t }}</h2>
+    <div class="bloc-nature">
+      <p>{{ node.field_destinature_nature_text.value | t }}</p>
+    </div>
+  </div>
+  {{ content.field_paragraphe_des_destination }}
+  <div class="down">
+    <a href="#journee_ideale" class="arrow-link">
+      <span class="arrow"></span>
+    </a>
+  </div>
+</section>
+<section id="journee_ideale">
+  <div class="bloc-container animate show">
+    <h2 class="title-nature">{{ content.field_journee_ideal_titre }}</h2>
+  </div>
+  {{ content.field_paragraphe_des_journees_id }}
+</section>
+<section id="agenda">
+  <div class="bloc-container animate show">
+    <h2 class="title-nature">{{ content.field_agendaa_titre }}</h2>
+  </div>
+  <div class="agenda">
+    {% set agendas = node.field_paragraphe_agenda %}
+    <ul class="agenda-list">
+    {% for agenda in agendas %}
+      <li>
+        <a href="">
+          <div class="agenda-img">
+            <img src="{{ file_url(agenda.entity.field_bg_image_1.entity.uri.value) }}" width="394" height="394" alt="abbaye">
+            <div class="agenda-mask">
+              <time class="date">{{ agenda.entity.field_date.value }}</time>
+              <p>{{ agenda.entity.field_titre.value }}</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  <button><a href="{{ content.field_agenda_link.0['#url'] }}">{{'Tout l\'agenda'|t}}</a></button>
+</section>

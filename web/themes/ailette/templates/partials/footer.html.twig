@@ -1,0 +1,28 @@
+<section id="map">
+    <div class="bloc-container animate show">
+        <h2 class="title-nature">{{'La Station Verte de l\'Ailette'|t}}</h2>
+    </div>
+    <div class="map">
+        <img src="{{ base_path ~ directory }}/images/map.png"  alt="">
+    </div>
+</section>
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="footer-top">
+        <div class="footer-left">
+            <div class="newsletter">
+                <p>Newsletter</p>
+                <div class="form">
+                  {{ drupal_entity('block','webform') }}
+                </div>
+            </div>
+            <div class="follow-us">
+                {{ drupal_entity('block','footersocial') }}
+                {{ drupal_entity('block','footerpartenaires') }}
+            </div>
+        </div>
+        {{ drupal_entity('block','footerright') }}
+    </div>
+    {{ drupal_entity('block','ayalineblock') }}
+  </div>
+</footer>
