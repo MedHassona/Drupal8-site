@@ -1,4 +1,5 @@
-About:
+# About:
+
 a website built with drupal and a custom theme based on the static model of ailette.org
 
 # Composer template for Drupal projects
