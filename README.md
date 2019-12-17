@@ -1,6 +1,6 @@
 # About:
 
-a website built with drupal and a custom theme based on the static model of [aillette.org](http://www.ailette.org/).
+A website built with drupal and a custom theme based on the static model of [aillette.org](http://www.ailette.org/).
 
 # Composer template for Drupal projects
 
