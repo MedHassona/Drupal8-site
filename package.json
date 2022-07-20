@@ -32,6 +32,6 @@
     "file-loader": "^3.0.1",
     "flexslider": "^2.7.1",
     "jquery": "^3.3.1",
-    "terser": "^3.14.1"
+    "terser": "^4.8.1"
   }
 }
